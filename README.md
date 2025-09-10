@@ -1,4 +1,4 @@
-# AI-Assisted Coding Framework
+# Sancak - AI-Assisted Coding Methodology & Framework
 
 This is a structured product development methodology that leverages AI/human interaction for software development. It enforces test-driven development, hierarchical requirements, and role-based collaboration between AI agents and humans. The AI will be guided to operate within the framework using the markdown files in `/docs` so it's a good place to go to understand it yourself. 
 
@@ -38,6 +38,9 @@ Clone this repo as the baseline of your project, or unzip into an existing proje
 - `/docs/PROMPTS.md` - AI agent prompts for each role
 - `/docs/WORKFLOW.md` - Process guidelines and state management
 
+## About the Name: Sancak
+
+**Sancak** means *flag*, *banner*, or *standard* in Turkish. As a project seeking to enforce the critical roles in a software project, **Sancak** acts as a standard-bearer for disciplined, collaborative development. It symbolizes the unifying principles under which architects, engineers, product managers, testers, and AI agents align — ensuring clarity, accountability, and rigorous progress at every step. Just as a banner guides and inspires those who march under it, the **Sancak** methodology provides a visible standard for building software the “right way.”
 
 ## Acknowledgments
 
