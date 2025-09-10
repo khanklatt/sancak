@@ -27,9 +27,29 @@ If these principles resonate with your approach to software development, I'm hop
 
 ## Usage
 
-Clone this repo as the baseline of your project, or unzip into an existing project. Then to begin using it, include the markdown files from `/docs` in your AI chatbot context, and initiate projects with a phrase like:
+### Requirements generation
+1. Clone this repo as the baseline of your project, or unzip into an existing project. 
+1. Then, include *each of the markdown files individually* from `/docs` in your AI coding chat context
+1. Initiate requirements gathering with a phrase like:
+* "Help me write the requirements for a product that..." *
+*Merely including the docs folder itself does not seem to have the same effect as individually outlining the files separately*
+1. Answer any questions that the AI might pose. I tend to provide some project assumptions about tech stack and other details, so if you haven't done so yet, you can articulate your expectations or tell the AI you'd like it to choose what seems most suitable.
+1. When ready, it can be sufficient to merely say, "Let's proceed to the next step."
 
-"Help me write the requirements for a product that..."
+### TDD and Development cycle
+1. At this juncture, the AI should write some unit tests. If not, you might guide it that way.
+1. Review the unit tests, and when satisfied you can tell the AI to proceed to the next step. If you want to be more explicit, you can ask it to produce a set of TODOs to create the project directory structure, create config files, and establish your preferred coding conventions for the selected platform choices made so far. 
+1. It's up to you whether you want to go deeper into more implementation, or ask the AI to make the tests pass first. Small iterative cycles are recommended so you don't get too far ahead of your skiis. Recommended prompt: "Lets make sure our tests are passing and we're happy with our test coverage."
+1. The AI should now iterate on making the tests pass and depending on frameworks and toolsets, it might detect coverage gaps and either implement or offer to implement more tests to expand coverage. It is recommended to keep the AI tasked on writing tests before writing the implementation, so if it offers to skip ahead, keep it in line.
+1. Rinse and repeat until all TODOs in your requirements are complete.
+
+### Recommended Prompts
+At various stages of completeness, you can try some of these prompts:
+- Lets make sure our tests are passing and we're happy with our test coverage.
+- Please review the code as a senior developer might, and add some TODOs for improving the readability and maintainability of the code and the tests. Then, fix those TODOs.
+- Since we made code changes, let's make sure our tests are still passing.
+- I noticed during refactoring, you removed requirement references. Please ensure that all implementations are traceable back to their requirements.
+- Let's go through the steps of showing our progress to stakeholders, how should we proceed to show working code?
 
 ## Framework Files
 
