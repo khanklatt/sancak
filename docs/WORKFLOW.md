@@ -1,3 +1,5 @@
+<!-- FRAMEWORK FILE - DO NOT EDIT - This file contains workflow guidelines and process instructions -->
+
 # Workflow Guidelines
 
 ## Development State Machine

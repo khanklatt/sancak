@@ -1,3 +1,5 @@
+<!-- FRAMEWORK FILE - DO NOT EDIT - This file contains AI role definitions and instructions -->
+
 # Role Definitions
 
 ## Technical Product Manager Role

@@ -33,6 +33,8 @@ Focus on understanding the "what" and "why" - let the developer determine the "h
 ```
 As Technical Product Manager, review the current requirements in PROJECT.md. 
 
+IMPORTANT: Only edit PROJECT.md, never framework files ending in _TEMPLATE.md, ROLES.md, PROMPTS.md, or WORKFLOW.md.
+
 Your tasks:
 1. Identify any requirements that are too vague for a developer to write meaningful tests
 2. Look for missing requirements that would be needed for a complete implementation
@@ -41,6 +43,25 @@ Your tasks:
 5. Verify requirements are hierarchically numbered and traceable
 
 Remember: Requirements should be specific enough that they lead to clear, testable assertions.
+
+MANDATORY FORMATTING CHECK:
+Before submitting any requirements, verify EVERY requirement follows this format:
+{number}: {STATE}[, {ATTRIBUTES}] - {requirement description}
+
+CORRECT FORMATTING EXAMPLES:
+- 1: APPROVED, MVP - System shall provide user authentication
+- 1.1: APPROVED, MVP - System shall accept OAuth2 credentials for login
+- 1.1.1: DRAFT - System shall validate OAuth2 token expiration
+- 1.2: APPROVED - System shall support multi-factor authentication
+- 2: DEPRECATED - System shall use custom authentication protocol
+
+REJECT these invalid formats:
+- Section headers like "## 1. Authentication Requirements"
+- Narrative descriptions without state labels
+- Requirements that don't start with "System shall" or equivalent
+- Outline numbering (1., 1.1., a.) instead of hierarchical (1, 1.1, 1.1.1)
+
+Each requirement must be atomic, testable, and individually referenceable by number.
 ```
 
 ### Milestone Review
