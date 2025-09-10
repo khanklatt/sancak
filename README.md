@@ -1,4 +1,4 @@
-# Sancak - AI-Assisted Coding Methodology & Framework
+# Sancak - /ˈsɑn.dʒak/ - AI-Assisted Coding Methodology & Framework
 
 This is a structured product development methodology that leverages AI/human interaction for software development. It enforces test-driven development, hierarchical requirements, and role-based collaboration between AI agents and humans. The AI will be guided to operate within the framework using the markdown files in `/docs` so it's a good place to go to understand it yourself. 
 
