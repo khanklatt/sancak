@@ -33,6 +33,26 @@ Focus on understanding the "what" and "why" - let the developer determine the "h
 ```
 As Technical Product Manager, review the current requirements in PROJECT.md. 
 
+MANDATORY BNF COMPLIANCE: All requirements must conform to this specification:
+
+<requirement> ::= <number> ":" <space> <state> [<attributes>] <space> "-" <space> <description>
+<number> ::= <digit> | <number> "." <digit>
+<state> ::= "DRAFT" | "APPROVED" | "IMPLEMENTED" | "DEPRECATED"
+<attributes> ::= "," <space> <attribute-list>
+<attribute-list> ::= <attribute> | <attribute-list> "," <space> <attribute>
+<attribute> ::= "MVP" | "FUTURE"
+<description> ::= ("System shall " | "Application must " | "Service will ") <action>
+
+VALID FORMAT EXAMPLES:
+✓ 1: APPROVED, MVP - System shall provide user authentication
+✓ 1.1: DRAFT - Application must validate OAuth2 tokens
+✓ 2.3.1: IMPLEMENTED - Service will log failed attempts
+
+INVALID FORMAT EXAMPLES:
+✗ "## 1. Authentication Requirements"
+✗ "1.1 User Login - The system should..."
+✗ Any section headers or narrative text
+
 IMPORTANT: Only edit PROJECT.md, never framework files ending in _TEMPLATE.md, ROLES.md, PROMPTS.md, or WORKFLOW.md.
 
 Your tasks:
@@ -40,26 +60,7 @@ Your tasks:
 2. Look for missing requirements that would be needed for a complete implementation
 3. Ensure architectural decisions are documented in ADR format
 4. Assign appropriate states (DRAFT/APPROVED) and MVP tags for breadth-first implementation
-5. Verify requirements are hierarchically numbered and traceable
-
-Remember: Requirements should be specific enough that they lead to clear, testable assertions.
-
-MANDATORY FORMATTING CHECK:
-Before submitting any requirements, verify EVERY requirement follows this format:
-{number}: {STATE}[, {ATTRIBUTES}] - {requirement description}
-
-CORRECT FORMATTING EXAMPLES:
-- 1: APPROVED, MVP - System shall provide user authentication
-- 1.1: APPROVED, MVP - System shall accept OAuth2 credentials for login
-- 1.1.1: DRAFT - System shall validate OAuth2 token expiration
-- 1.2: APPROVED - System shall support multi-factor authentication
-- 2: DEPRECATED - System shall use custom authentication protocol
-
-REJECT these invalid formats:
-- Section headers like "## 1. Authentication Requirements"
-- Narrative descriptions without state labels
-- Requirements that don't start with "System shall" or equivalent
-- Outline numbering (1., 1.1., a.) instead of hierarchical (1, 1.1, 1.1.1)
+5. Verify all requirements conform to the BNF specification above
 
 Each requirement must be atomic, testable, and individually referenceable by number.
 ```

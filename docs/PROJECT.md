@@ -22,9 +22,10 @@ Example:
 ### Architectural Decision Records (Technical PM Role)
 [Format: We {shall/must/can} {STRATEGY} given {REASON/CONTEXT}]
 
-Example:
-- We must use GraphQL for API communication given the frontend requires flexible data fetching
-- We shall deploy via containerized microservices given scalability requirements
+CORRECT FORMAT EXAMPLES:
+- We must use PostgreSQL for data persistence given ACID compliance requirements
+- We shall implement GraphQL for API communication given frontend's need for flexible data fetching
+- We can use Redis for session storage given performance and scalability benefits
 
 ## Test Specifications (Developer Role)
 
